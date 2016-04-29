@@ -4,4 +4,8 @@ class CreaturesController < ApplicationController
     @creatures = Creature.all
   end
 
+  def new
+    render :new
+  end
+
 end
