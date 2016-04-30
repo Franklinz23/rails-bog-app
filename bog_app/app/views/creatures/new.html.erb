@@ -10,8 +10,10 @@
   <%= f.text_area :description, required: true%>
 </br>
   <%= f.submit "Save Creature" %>
-</br>
-  <%= f.file_field :avatar %>
 <% end %>
 
 </div>
+
+<%= form_for @user, url: users_path, html: { multipart: true } do |form| %>
+  <%= form.file_field :avatar %>
+<% end %>
