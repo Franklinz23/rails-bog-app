@@ -1,6 +1,17 @@
+<div id="form">
 
 <%= form_for @creature do |f| %>
-<%= f.text_field :name %>
-    <%= f.text_area :description %>
-    <%= f.submit "Save Creature" %>
+  Name:
+</br>
+  <%= f.text_field :name, required: true%>
+</br>
+  Description:
+</br>
+  <%= f.text_area :description, required: true%>
+</br>
+  <%= f.submit "Save Creature" %>
+</br>
+  <%= f.file_field :avatar %>
 <% end %>
+
+</div>

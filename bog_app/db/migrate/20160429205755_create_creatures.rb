@@ -7,4 +7,13 @@ class CreateCreatures < ActiveRecord::Migration
       t.timestamps null: false
     end
   end
+
+  def up
+    add_attachment :creatures, :avatar
+  end
+
+  def down
+    remove_attachment :creatures, :avatar
+  end
+
 end
