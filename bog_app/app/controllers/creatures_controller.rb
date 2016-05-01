@@ -13,6 +13,11 @@ class CreaturesController < ApplicationController
     redirect_to creatures_path
   end
 
+  def show
+    @creature = Creature.find_by_id params[:id] 
+    render :show
+  end
+
 private
 
   def creature_params
